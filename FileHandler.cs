@@ -76,6 +76,11 @@ namespace OTUS_Files
             return string.Join(",\n", FileList);
         }
 
+        /// <summary>
+        /// Добавляем текущую дату в текст файлов
+        /// </summary>
+        /// <param name="DirectoryName"></param>
+        /// <returns></returns>
         public async Task<string> AddToAllFilesCurrentDate (string DirectoryName)
         {
             string[] files = Directory.GetFiles(DirectoryName);
@@ -105,6 +110,11 @@ namespace OTUS_Files
             return string.Join(",\n", FileList);
         }
 
+        /// <summary>
+        /// А тут мы читаем все ранее созданные и записанные файлы
+        /// </summary>
+        /// <param name="DirectoryName"></param>
+        /// <returns></returns>
         public async Task<string> ReadAllFilesInDirectory(string DirectoryName)
         {
             string[] files = Directory.GetFiles(DirectoryName);
